@@ -1,0 +1,97 @@
+Guide to Setting Up Your Own Email and Admin Credentials
+Step 1: Setting Up Your Email
+To use your own email for sending attendance reports, you need to modify the SMTP settings and email credentials in the script.
+
+Changes in main.py
+SMTP Settings and Email Credentials:
+Locate the section where the email credentials are set for the SMTP server. Update the email and password with your own.
+
+# Lines 153-158
+# Replace 'anymail@outlook.com' with your email
+# Replace 'password' with your email password
+
+server.login('anymail@outlook.com', 'password')
+
+# Lines 262-265
+# Replace 'anymail@outlook.com' with your email
+# Replace 'password' with your email password
+
+server.login('anymail@outlook.com', 'password')
+Admin Email Configuration:
+Update the email to receive admin OTP and attendance reports.
+
+# Line 333
+# Replace 'anymail@outlook.com' with your email
+
+msg['From'] = 'anymail@outlook.com'
+
+# Line 341
+# Replace 'anymail@outlook.com' with your email
+
+server.login('anymail@outlook.com', 'password')
+
+# Line 359
+# Replace 'anymail@outlook.com' with your email
+
+server.login('anymail@outlook.com', 'password')
+Admin Email for OTP:
+Update the email for sending the OTP to the admin.
+
+
+# Line 364
+# Replace 'anymail@outlook.com' with your email
+
+msg['From'] = 'anymail@outlook.com'
+
+# Line 367
+# Replace 'anymail@outlook.com' with your email
+
+server.login('anymail@outlook.com', 'password')
+Step 2: Setting Up Your Own Username and Password
+For security, it's recommended to hash your username and password. Replace the hardcoded hash values with the hash values of your own username and password.
+
+Changes in main.py
+Hash the Username and Password:
+Use a tool or script to generate the MD5 hash of your username and password. You can use the following Python script to generate the hashes:
+
+
+import hashlib
+
+def generate_hash(value):
+    return hashlib.md5(value.encode()).hexdigest()
+
+username = "your_username"
+password = "your_password"
+
+print("Username Hash:", generate_hash(username))
+print("Password Hash:", generate_hash(password))
+Replace the Hash Values:
+Update the hash values in the main.py script with your own.
+
+
+# Line 271
+# Replace 'hardcoded hash value of admin username' with the hash of your username
+
+if checker == "your_username_hash":
+
+# Line 282
+# Replace 'hardcode hash value of password' with the hash of your password
+
+if epassword == "your_password_hash":
+Example
+If your username is admin and your password is adminpass, the hashes would be:
+
+Username Hash: 21232f297a57a5a743894a0e4a801fc3
+Password Hash: d033e22ae348aeb5660fc2140aec35850c4da997
+Update the script as follows:
+
+# Line 271
+if checker == "21232f297a57a5a743894a0e4a801fc3":
+
+# Line 282
+if epassword == "d033e22ae348aeb5660fc2140aec35850c4da997":
+Final Notes
+Ensure that you have correctly set up your email and password in the SMTP configuration.
+Test the email functionality to confirm that reports and notifications are being sent correctly.
+Keep your hashed username and password secure and do not share them.
+By following these steps, you can customize the Facial Recognition Attendance System to use your own email and secure admin credentials.
