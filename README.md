@@ -4,7 +4,7 @@ This Facial Recognition Attendance System uses computer vision and machine learn
 It allows the administrator to manage student records and send attendance reports via email.
 
 *----------------------------------*
-Check How to use file before running the code as you will need to make some changes
+Check "Guide to setup" file before running the code as you will need to make some changes
 *----------------------------------*
 
 Features
