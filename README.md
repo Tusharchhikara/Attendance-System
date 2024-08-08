@@ -64,8 +64,9 @@ Disclaimer
 This project is free for use. For using this code in any other project/application, please consider taking prior permission.
 
 Developer
-Tushar
+Tushar 
 Contact: chhikaratushar12@gmail.com
+Tarun Joshi (taruntj2003@gmail.com)
 Build: 2022
 Version: 1.0
 Thank you for using the Facial Recognition Attendance System!
