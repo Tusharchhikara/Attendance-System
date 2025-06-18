@@ -351,7 +351,7 @@ def main():
       Bulid 2022
       Version 1.0
       Developer Tushar and Team
-      Contact chhikaratushar12@gmail.com
+      Contact chhikaratushar12@gmail.com,taruntj2003@gmail.com
          """)
         print("Thank You :)")
         main()
